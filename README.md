@@ -1,6 +1,5 @@
 # Creating the README.md file with the given content
 
-content = """
 # API de Coleta de Campo
 
 ## Descrição do Projeto
