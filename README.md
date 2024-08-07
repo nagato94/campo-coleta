@@ -57,32 +57,32 @@ Este projeto é uma API desenvolvida em Ruby on Rails para gerenciar um sistema 
 ## Instalação e Configuração
 
 1. Clone o repositório:
-   \`\`\`bash
+   
    git clone <URL_DO_REPOSITORIO>
    cd campo_coleta
-   \`\`\`
+   
 
 2. Instale as dependências:
-   \`\`\`bash
+ 
    bundle install
-   \`\`\`
+  
 
 3. Configure o banco de dados:
-   \`\`\`bash
+  
    rails db:create
    rails db:migrate
-   \`\`\`
+  
 
 4. Configure as variáveis de ambiente:
    Crie um arquivo `.env` na raiz do projeto e adicione a seguinte linha:
-   \`\`\`
+   
    JWT_SECRET=your_secret_key
-   \`\`\`
+  
 
 5. Inicie o servidor Rails:
-   \`\`\`bash
+   
    rails s
-   \`\`\`
+ 
 
 ## Uso da API
 
@@ -131,7 +131,7 @@ A autenticação é feita via JWT. Para obter um token, faça uma requisição P
 
 #### Criar Usuário
 
-\`\`\`bash
+
 curl -X POST http://localhost:3000/api/v1/users -d '{
   "user": {
     "name": "John Doe",
@@ -140,30 +140,29 @@ curl -X POST http://localhost:3000/api/v1/users -d '{
     "cpf": "12345678901"
   }
 }' -H "Content-Type: application/json"
-\`\`\`
+
 
 #### Obter Token de Autenticação
 
-\`\`\`bash
+
 curl -X POST http://localhost:3000/api/v1/auth/login -d '{
   "email": "john@example.com",
   "password": "password123"
 }' -H "Content-Type: application/json"
-\`\`\`
+
 
 #### Listar Usuários com Token JWT
 
-\`\`\`bash
 curl -H "Authorization: Bearer your_jwt_token_here" http://localhost:3000/api/v1/users
-\`\`\`
+
 
 ## Rodando os Testes
 
 Para rodar os testes, use o comando:
 
-\`\`\`bash
+
 bundle exec rspec
-\`\`\`
+
 
 Os testes cobrem as validações dos modelos, as respostas dos controladores e o método de autenticação.
 
